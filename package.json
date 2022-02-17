@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "name": "vesty",
+  "description": "linear vesting lock nft contracts",
+  "repository": "https://github.com/tautology-finance/vesty.git",
+  "author": "phil",
+  "license": "GPL-3.0-or-later",
+  "private": true,
+  "scripts": {},
+  "devDependencies": {}
+}
