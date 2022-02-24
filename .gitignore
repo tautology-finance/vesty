@@ -1,5 +1,12 @@
-cache
-artifacts
-node_modules
+node_modules/
+
+cache/
+artifacts/
+
+yarn.lock
+yarn-error.log
 
 .env*
+
+typechain/
+dist/
