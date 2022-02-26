@@ -1,5 +1,5 @@
 [default]
-src = 'contracts'
+src = 'src'
 out = 'out'
 libs = ['lib']
 remappings = ['ds-test/=lib/ds-test/src/']
