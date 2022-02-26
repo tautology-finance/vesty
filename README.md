@@ -1,1 +1,1 @@
-linear vesting lock nfts
+linear vesting + ve style voting escrow 
