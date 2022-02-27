@@ -43,8 +43,19 @@ contract VestcrowMock is Vestcrow {
         return locksByAccount[account].length();
     }
 
-    function create_lock(address account, uint duration) external returns (uint) {
-        return _create_lock(account, duration);
+    function create_lock(address account) external returns (uint) {
+        return _create_lock(account);
+    }
+
+    function add_deposit(uint lockId, uint amount) external {
+        _add_deposit(lockId, amount);
+    }
+    function remove_deposit(uint lockId, uint depositId) external {
+        _remove_deposit(lockId, depositId);
+    }
+
+    function set_unlock_time(uint lockId, uint duration) external {
+        _set_unlock_time(lockId, duration);
     }
 
     function remove_lock(address account, uint lockId) external {
@@ -56,7 +67,7 @@ contract VestcrowMock is Vestcrow {
     }
 
     function bias_weight(uint _lockId, uint at) external view returns (uint) {
-        return _bias_weight(idToLock[_lockId], at);
+        return _bias_weight(idToLock[_lockId]);
     }
 
     function decay_rate(uint _lockId, uint depositIndex) external returns (uint) {
@@ -78,7 +89,6 @@ contract VestcrowMock is Vestcrow {
     function value(address account) external returns (uint) {
         return _value(account);
     }
-
     function votes(address account) external returns (uint) {
         return _votes(account);
     }
